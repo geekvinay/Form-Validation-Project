@@ -1,0 +1,9 @@
+img.hero--img {
+  height: 80vh;
+  width: 40vw;
+  object-fit: fill;
+}
+
+div.btn--wrapper button {
+  width: 49%;
+}

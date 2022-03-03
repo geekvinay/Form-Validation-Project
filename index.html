@@ -8,6 +8,7 @@
     <title>Vite App</title>
   </head>
   <body>
+    <!-- Navigation Bar -->
     <nav
       class="w-full h-14 bg-slate-100 flex justify-start items-center shadow-sm"
     >
@@ -29,6 +30,54 @@
         Know more</a
       >
     </nav>
+
+    <div class="app w-full px-20 grid grid-cols-2 grid-rows-1 gap-4">
+      <img
+        src="assets/Hero-img.svg"
+        alt=""
+        class="hero--img my-8 border-2 border-gray-600 rounded-xl"
+      />
+      <div class="form--container m-8 p-8 w-full flex-col items-center">
+        <h2 class="text-3xl text-gray-800 pb-5 font-bold uppercase text-center">
+          ` Details
+        </h2>
+        <form action="" class="w-full flex-col justify-start items-center">
+          <input
+            type="text"
+            class="my-2 border-1 rounded-xl w-full"
+            placeholder="Name"
+          />
+          <input
+            type="text"
+            class="my-2 border-1 rounded-xl w-full"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            class="my-2 border-1 rounded-xl w-full"
+            placeholder="Password"
+          />
+          <input
+            type="text"
+            class="my-2 border-1 rounded-xl w-full"
+            placeholder="Confirm Password"
+          />
+          <div class="btn--wrapper">
+            <button
+              class="font-medium my-2 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-800"
+            >
+              Submit
+            </button>
+            <button
+              class="font-medium my-2 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-800"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script
       src="https://kit.fontawesome.com/3bd604a4cf.js"
       crossorigin="anonymous"
