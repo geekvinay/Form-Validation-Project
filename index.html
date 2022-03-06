@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Form Validation</title>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav
-      class="w-full h-14 bg-slate-100 flex justify-start items-center shadow-sm"
+      class="w-full h-14 ,bg-slate-100 flex justify-start items-center shadow-sm"
     >
       <img src="assets/logo.svg" alt="" class="h-10 px-5" />
       <a href="" class="text-base text-gray-800 font-sans font-semibold px-4"
@@ -30,51 +30,70 @@
       >
     </nav>
 
-    <div class="app w-full px-20 grid grid-cols-2 grid-rows-1 gap-4">
-      <img
-        src="assets/Hero-img.svg"
-        alt=""
-        class="hero--img my-8 border-2 border-gray-600 rounded-xl"
-      />
-      <div class="form--container m-8 p-8 w-full flex-col items-center">
-        <h2 class="text-3xl text-gray-800 pb-5 font-bold uppercase text-center">
-          Details
-        </h2>
-        <form action="" class="w-full flex-col justify-start items-center">
-          <input
-            type="text"
-            class="my-2 border-1 rounded-lg w-full"
-            placeholder="Name"
-          />
-          <input
-            type="text"
-            class="my-2 border-1 rounded-lg w-full"
-            placeholder="Email"
-          />
-          <input
-            type="password"
-            class="my-2 border-1 rounded-lg w-full"
-            placeholder="Password"
-          />
-          <input
-            type="text"
-            class="my-2 border-1 rounded-lg w-full"
-            placeholder="Confirm Password"
-          />
-          <div class="btn--wrapper">
-            <button
-              class="font-medium my-2 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-800"
-            >
-              Submit
-            </button>
-            <button
-              class="font-medium my-2 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-800"
-            >
-              Reset
-            </button>
-          </div>
-        </form>
-      </div>
+    <div class="app w-full px-20 flex flex-col items-center">
+      <h2 class="text-3xl text-gray-800 p-10 font-bold uppercase text-center">
+        Details
+      </h2>
+      <form
+        id="form"
+        action=""
+        class="w-1/2 flex-col justify-start items-center"
+      >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="my-2 border-1 rounded-lg w-full"
+          placeholder="Name"
+        />
+        <p class="error text-sm text-red-500 font-medium"></p>
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          class="my-2 border-1 rounded-lg w-full"
+          placeholder="Email"
+        />
+        <p class="error text-sm text-red-500 font-medium"></p>
+        <input
+          type="text"
+          name="username"
+          id="user"
+          class="my-2 border-1 rounded-lg w-full"
+          placeholder="Username"
+        />
+        <p class="error text-sm text-red-500 font-medium"></p>
+        <input
+          type="password"
+          name="pass"
+          id="pass"
+          placeholder="Password"
+          class="my-2 border-1 rounded-lg w-full"
+        />
+        <p class="error text-sm text-red-500 font-medium"></p>
+        <input
+          type="password"
+          name="conpass"
+          id="conpass"
+          placeholder="ConfirmPassword"
+          class="my-2 border-1 rounded-lg w-full"
+        />
+        <p class="error text-sm text-red-500 font-medium"></p>
+        <div class="btn--wrapper flex justify-between">
+          <button
+            class="font-medium my-5 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-800"
+            type="reset"
+          >
+            Reset
+          </button>
+          <button
+            class="font-medium my-5 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-800"
+            type="submit"
+          >
+            Validate
+          </button>
+        </div>
+      </form>
     </div>
 
     <script
