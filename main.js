@@ -28,25 +28,36 @@ function validate(event) {
     let length = name.value.length;
     if (length <= 2) {
         throwErr(name, "Please enter a Valid Name");
+        return;
     }
 
     let flag2;
     if (username.value.includes(" ")) {
         throwErr(username, "Username can't contain a Space");
+        return;
     }
     let firstChar = username.value.charAt(0);
-    console.log(firstChar);
     if (firstChar === firstChar.toUpperCase()) {
         throwErr(username, "Username can't start with a Capital");
+        return;
     }
     flag2 = /\d/.test(username.value);
     if (flag2) {
         throwErr(username, "Username can't contain a Number");
+        return;
     }
 
-    if (password.value !== confirm.value) {
-        throwErr(password, "Both the passwords don't match");
+    let flagPass = password.value ? true : false;
+
+    if (!flagPass) {
+        throwErr(password, "Please fill the passwords!!!");
+        return;
     }
+    else if (password.value !== confirm.value) {
+        throwErr(password, "Both the passwords don't match");
+        return;
+    }
+
 
     alert(`Hurray!!!🎊🎉 Congrats ${name.value} \n\nThe form is being validated and there are no errors 🥳🎊🎉`)
 }
